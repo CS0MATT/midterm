@@ -1,0 +1,549 @@
+/* =========================
+   BASIC SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111111;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+
+/* =========================
+   NAVIGATION BAR
+========================= */
+
+header {
+    height: 142px;
+    background-color: #202020;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+}
+
+
+/* =========================
+   9 DOTS
+========================= */
+
+.dots {
+    position: absolute;
+
+    left: 42px;
+    top: 27px;
+
+    width: 48px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 5px);
+
+    gap: 11px;
+}
+
+.dots span {
+    width: 4px;
+    height: 4px;
+
+    background-color: white;
+
+    border-radius: 50%;
+}
+
+
+/* =========================
+   LEFT NAVIGATION
+========================= */
+
+.left-nav {
+    position: absolute;
+
+    left: 22%;
+
+    display: flex;
+    gap: 30px;
+}
+
+.left-nav a,
+.right-nav a {
+    color: white;
+
+    text-decoration: none;
+
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 18px;
+
+    font-weight: 600;
+}
+
+.left-nav a:hover,
+.right-nav a:hover {
+    color: #ff2525;
+}
+
+
+/* =========================
+   LOGO
+========================= */
+
+.logo {
+    position: absolute;
+
+    left: 50%;
+    top: 20px;
+
+    transform: translateX(-50%);
+
+    width: 65px;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img {
+    width: 65px;
+    height: 75px;
+
+    object-fit: contain;
+}
+
+
+/* =========================
+   RIGHT NAVIGATION
+========================= */
+
+.right-nav {
+    position: absolute;
+
+    right: 4%;
+
+    display: flex;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.right-nav button {
+    background-color: #ff2525;
+
+    color: white;
+
+    border: none;
+
+    padding: 10px 15px;
+
+    border-radius: 20px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   SEARCH ICON
+========================= */
+
+.search {
+    width: 22px;
+    height: 22px;
+
+    border: 3px solid white;
+
+    border-radius: 50%;
+
+    position: relative;
+}
+
+.search::after {
+    content: "";
+
+    width: 9px;
+    height: 3px;
+
+    background-color: white;
+
+    position: absolute;
+
+    right: -7px;
+    bottom: -4px;
+
+    transform: rotate(50deg);
+}
+
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    height: 470px;
+
+    background-color: #111111;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* =========================
+   SIDE MENU
+========================= */
+
+.side-menu {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 150px;
+    height: 100%;
+
+    background-color: #303030;
+
+    padding: 48px 21px;
+
+    z-index: 10;
+}
+
+.side-menu div {
+    width: 88px;
+    height: 6px;
+
+    background-color: #191919;
+
+    margin-bottom: 14px;
+
+    border-radius: 5px;
+}
+
+.side-menu .active-line {
+    background-color: #ff2525;
+}
+
+
+/* =========================
+   GRAY GROUND
+========================= */
+
+.ground {
+    position: absolute;
+
+    left: 150px;
+
+    bottom: -35px;
+
+    width: calc(100% - 150px);
+
+    height: 230px;
+
+    background-color: #292929;
+
+    transform: skewY(8deg);
+
+    transform-origin: left bottom;
+
+    z-index: 1;
+}
+
+
+/* =========================
+   FLOATING CAR
+========================= */
+
+.car-area {
+    position: absolute;
+
+    left: 50%;
+
+    top: 48px;
+
+    width: 900px;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+}
+
+.car-area img {
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+}
+
+
+/* =========================
+   CAR SHADOW
+========================= */
+
+.car-shadow {
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 62px;
+
+    width: 570px;
+    height: 35px;
+
+    transform: translateX(-50%);
+
+    background-color: #050505;
+
+    border-radius: 50%;
+
+    filter: blur(18px);
+
+    opacity: 0.8;
+
+    z-index: 3;
+}
+
+
+/* =========================
+   BOTTOM SECTION
+========================= */
+
+.bottom {
+    height: 155px;
+
+    background-color: #111111;
+
+    display: flex;
+
+    align-items: center;
+
+    padding-left: 51px;
+
+    position: relative;
+
+    z-index: 20;
+}
+
+
+/* =========================
+   PRESENTATION
+========================= */
+
+.presentation {
+    width: 405px;
+    height: 95px;
+
+    background-color: #ff2525;
+
+    display: flex;
+
+    position: relative;
+}
+
+
+/* Small Car */
+
+.car-small {
+    width: 207px;
+    height: 95px;
+
+    overflow: hidden;
+}
+
+.car-small img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* Play Button */
+
+.play {
+    position: absolute;
+
+    left: 187px;
+    top: 28px;
+
+    width: 42px;
+    height: 42px;
+
+    background-color: #eeeeee;
+
+    color: #ff2525;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+}
+
+
+/* Presentation Text */
+
+.presentation-text {
+    padding-left: 42px;
+
+    padding-top: 20px;
+}
+
+.presentation-text p {
+    font-size: 11px;
+
+    font-weight: bold;
+}
+
+.presentation-text h3 {
+    font-family: 'Poppins', sans-serif;
+
+    font-size: 14px;
+
+    line-height: 16px;
+}
+
+
+/* =========================
+   SPECIFICATIONS
+========================= */
+
+.specifications {
+    width: 405px;
+    height: 72px;
+
+    background-color: #777777;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-around;
+
+    text-align: center;
+}
+
+.specifications h4 {
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.specifications p {
+    font-size: 9px;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.description {
+    width: 320px;
+
+    padding-left: 65px;
+}
+
+.description p {
+    font-size: 11px;
+
+    line-height: 15px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .left-nav {
+        left: 17%;
+    }
+
+    .right-nav {
+        right: 2%;
+
+        gap: 15px;
+    }
+
+    .left-nav a,
+    .right-nav a {
+        font-size: 14px;
+    }
+
+    .car-area {
+        width: 780px;
+    }
+
+    .description {
+        display: none;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    header {
+        height: 110px;
+    }
+
+    .left-nav,
+    .right-nav {
+        display: none;
+    }
+
+    .dots {
+        left: 25px;
+        top: 25px;
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .side-menu {
+        width: 100px;
+    }
+
+    .side-menu div {
+        width: 60px;
+    }
+
+    .ground {
+        left: 100px;
+
+        width: calc(100% - 100px);
+    }
+
+    .car-area {
+        top: 70px;
+
+        width: 650px;
+    }
+
+    .car-shadow {
+        width: 400px;
+    }
+
+    .bottom {
+        padding-left: 15px;
+    }
+
+    .specifications {
+        display: none;
+    }
+}
